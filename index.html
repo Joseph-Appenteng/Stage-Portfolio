@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/kit.fontawesome.com_845fef67b3.js"></script>
+  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo-container">
+      <div class="logo">Joseph Appenteng</div>
+      <p>Web Developer</p>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">Over mij</a></li>
+        <li><a href="#experience">Ervaring</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo-container">
+      <div class="logo">Joseph Appenteng</div>
+      <p>Web Developer</p>
+    </div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="img/pexels-photo-574071.webp" alt="JOE profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hallo, Ik ben</p>
+      <h1 class="title">Joseph Appenteng</h1>
+      <p class="section__text__p2">Front end Developer</p>
+
+      <div id="socials-container">
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon-button linkedin-button">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="icon-button github-button">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="text-container">
+          <p>
+            Hoi, ik ben Joseph Appenteng, een MBO student bij
+            Media College Amsterdam met een passie voor websites maken. Door
+            mijn cursussen en projecten heb ik sterke vaardigheden ontwikkeld
+            in front end en backend development , en ik ben
+            enthousiast om deze toe te passen in een professionele omgeving.
+            Ik gedij in samenwerkingsverbanden en hou ervan om nieuwe
+            uitdagingen aan te gaan. Dit portfolio toont mijn werk en
+            weerspiegelt mijn inzet voor groei en innovatie. Ik kijk ernaar
+            uit om bij te dragen en te leren tijdens mijn aankomende stage.
+            Bedankt voor je bezoek!
+          </p>
+        </div>
+        <div class="about-containers">
+          <div class="details-container">
+            <i class="fa-solid fa-school"></i>
+            <h3>Ervaring</h3>
+            <p>2+ Jaar <br />Web Development</p>
+          </div>
+          <div class="details-container">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>School</h3>
+            <p>Media College Amsterdam<br />Mbo Niveau 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <i class="fa-solid fa-arrow-down" onclick="location.href='./#experience'">
+    </i>
+  </section>
+  <section id="experience">
+    <h1 class="title">Ervaring</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Kern Skills</h2>
+          <div class="article-container">
+            <article>
+              <i class="fa-brands fa-html5"></i>
+              <div>
+                <h3>HTML</h3>
+                <p>Ervaren</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-brands fa-css3-alt"></i>
+              <div>
+                <h3>CSS</h3>
+                <p>Ervaren</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-brands fa-sass"></i>
+              <div>
+                <h3>SASS</h3>
+                <p>Tussenliggend</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-brands fa-js"></i>
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-solid fa-plus"></i>
+              <div>
+                <h3>Adobe XD</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <h3>Github</h3>
+                <p>Tussenliggend</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Skills</h2>
+          <div class="article-container">
+            <article>
+              <i class="fa-solid fa-database"></i>
+              <div>
+                <h3>MySql</h3>
+                <p>Tussenliggend</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-brands fa-docker"></i>
+              <div>
+                <h3>Docker</h3>
+                <p>Ervaren</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-brands fa-laravel"></i>
+              <div>
+                <h3>Laravel</h3>
+                <p>Tussenliggend</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-brands fa-php"></i>
+              <div>
+                <h3>PhP</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <i class="fa-solid fa-arrow-down" onclick="location.href='./#projects'">
+    </i>
+  </section>
+  <section id="projects">
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+
+            <img data-modal-target="#modal" src="img/Screenshot 2024-09-09 103405.webp.png" alt="Project 1"
+              class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Muse Project</h2>
+          <div class="btn-container">
+            <a href="https://35229.hosts2.ma-cloud.nl/museweb/" target="_blank" class="icon-button linkedin-button">
+              <i class="fa-solid fa-window-maximize"></i> Live Demo
+            </a>
+            <a href="https://github.com/seanras02/MUSE" target="_blank" class="icon-button github-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img data-modal-target="#modal-2" src="img/Screenshot 2024-09-23 121848.webp.png" alt="Project 1"
+              class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Websop Project</h2>
+          <div class="btn-container">
+            <a href="https://josephappenteng.com/webshop/Homepagina.html" target="_blank" class="icon-button linkedin-button">
+              <i class="fa-solid fa-window-maximize"></i> Live Demo
+            </a>
+            <a href="https://github.com/Joseph-Appenteng/Webshop" target="_blank" class="icon-button github-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <a href="project.html">
+              <img src="img/pexels-photo-574071.webp" alt="Project 1" class="project-img" />
+            </a>
+          </div>
+          <h2 class="experience-sub-title project-title">Project 3</h2>
+          <div class="btn-container">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon-button linkedin-button">
+              <i class="fa-solid fa-window-maximize"></i> Live Demo
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="icon-button github-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <a href="project.html">
+              <img src="img/pexels-photo-574071.webp" alt="Project 1" class="project-img" />
+            </a>
+          </div>
+          <h2 class="experience-sub-title project-title">Project 4</h2>
+          <div class="btn-container">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon-button linkedin-button">
+              <i class="fa-solid fa-window-maximize"></i> Live Demo
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="icon-button github-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <i class="fa-solid fa-arrow-down" onclick="location.href='./#contact'">
+      </i>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Muse(Leerjaar2)</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        In samenwerking met het Amsterdam Museum werkte ik als Software
+        Development student mee aan het project "Nieuw
+        Amsterdam?". Dit project was onderdeel van een tentoonstelling over de
+        gedeelde geschiedenis tussen Amsterdam en New York. Het doel van het
+        project was om één historisch object uit de tentoonstelling tot leven
+        te brengen door middel van een interactieve installatie.
+      </p>
+      <h2>Project Overzicht</h2>
+      <p>
+        Dit project is gemaakt door Game Artist (3 studenten), Software Development (5 studenten) en Ruimtelijk Vormgeving (3 studenten).
+        De opdrachtgever van dit project was Amsterdam Museum en de project duurde 9 weken. Mijn rol als software
+        development student was de software voor de installatie ontwikkelen. Dit betrof de logica
+        van de interacties, het koppelen van data aan de fysieke installatie en zorgen voor een gebruiksvriendelijke
+        ervaring voor museumbezoekers.</p>
+      <div class="project-info">
+        <h2>Skills gebruikt</h2>
+        <ul class="technologies-list">
+          <li><i class="fa-brands fa-html5"></i> HTML</li>
+          <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+          <li><i class="fa-brands fa-js"></i> JavaScript</li>
+          <li><i class="fa-brands fa-sass"></i> Scss</li>
+        </ul>
+        <div class="btn-container">
+          <a href="https://35229.hosts2.ma-cloud.nl/museweb/" target="_blank" class="icon-button linkedin-button">
+            <i class="fa-solid fa-window-maximize"></i> Live Demo
+          </a>
+          <a href="https://github.com/seanras02/MUSE" target="_blank" class="icon-button github-button">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="overlay"></div>
+
+  <div class="modal" id="modal-2">
+    <div class="modal-header">
+      <div class="title">Webshop(Leerjaar 2)</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        Dit individueel project bestond uit het bouwen van een populair webshop van de Mediamarkt-webshop, een van de
+        populairste webshops in
+        Nederland. De webshop bevat een productfilter en een werkende "toevoegen aan winkelwagen"-functie. Het doel was
+        om een realistische webshopervaring na te bootsen met een gebruiksvriendelijke interface en een functioneel
+        productselectie- en aankoopproces.
+      </p>
+      <h2>Project Overzicht</h2>
+      <p>De doel van dit project was om een webshop replica te bouwen met productfilter en
+        winkelwagenfunctionaliteit.Mijn webshop keuze was Mediamarkt.de project duurde 4 weken.
+      </p>
+      <div class="project-info">
+        <h2>Skills gebruikt</h2>
+        <ul class="technologies-list">
+          <li><i class="fa-brands fa-html5"></i> HTML</li>
+          <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+          <li><i class="fa-brands fa-js"></i> JavaScript</li>
+        </ul>
+        <div class="btn-container">
+          <a href="https://josephappenteng.com/webshop/Homepagina.html" target="_blank" class="icon-button linkedin-button">
+            <i class="fa-solid fa-window-maximize"></i> Live Demo
+          </a>
+          <a href="https://github.com/Joseph-Appenteng/Webshop" target="_blank" class="icon-button github-button">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="overlay"></div>
+
+  <section id="contact">
+    <h1 class="title">Neem Contact</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <i class="fa-solid fa-envelope"></i>
+        <p><a href="mailto:examplemail@gmail.com">josephappenteng99@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <i class="fa-brands fa-linkedin"></i>
+        <p><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <i class="fa-solid fa-phone"></i>
+        <p><a href="">+31684986065</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2024 Joseph Appentng. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
