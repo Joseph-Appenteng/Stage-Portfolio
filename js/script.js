@@ -27,21 +27,6 @@ form.onsubmit = (e)=>{
   xhr.send(formData);
 }
 
-const apiURL = "https://api.github.com/users/Joseph-Appenteng/repos";
-
-async function fetchRepos() {
-    try {
-        const response = await fetch(apiURL);
-        if (!response.ok) {
-            throw new Error('Failed to fetch repos');
-        }
-        const repos = await response.json();
-        
-        displayRepos(repos);
-    } catch (error) {
-        console.error('Error fetching repositories:', error);
-    }
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   const commitList = document.getElementById('commit-list');
@@ -49,8 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
   async function fetchCommits() {
       try {
           const response = await fetch('https://api.github.com/users/Joseph-Appenteng/events');
-          const events = await response.json();
+          if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+          }
 
+          const events = await response.json();
           const pushEvents = events.filter(event => event.type === 'PushEvent');
 
           if (pushEvents.length === 0) {
@@ -58,18 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
               return;
           }
 
-          commitList.innerHTML = ''; // Clear initial "loading" message
+          commitList.innerHTML = ''; // Verwijder het initiële "loading" bericht
 
+          // Toon de meest recente commit van elke PushEvent
           pushEvents.slice(0, 5).forEach(event => {
-              event.payload.commits.forEach(commit => {
+              const recentCommit = event.payload.commits[0]; // Pak de eerste commit van elke push
+
+              if (recentCommit) {
                   const listItem = document.createElement('li');
                   listItem.innerHTML = `
                       <strong>Repo:</strong> ${event.repo.name}<br>
-                      <strong>Bericht:</strong> ${commit.message}<br>
+                      <strong>Bericht:</strong> ${recentCommit.message}<br>
                       <strong>Datum:</strong> ${new Date(event.created_at).toLocaleString()}
                   `;
                   commitList.appendChild(listItem);
-              });
+              }
           });
       } catch (error) {
           console.error('Error fetching commits:', error);

@@ -781,12 +781,13 @@ footer p {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  color: white;
-  margin-top: 5rem;
+  background-color: white;
+  margin-top: 8rem;
 }
 
 #commit-widget h2 {
   text-align: center;
+  color: black;
 }
 
 #commit-list {
