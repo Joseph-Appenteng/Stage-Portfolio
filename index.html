@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Joseph Appenteng</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/kit.fontawesome.com_845fef67b3.js"></script>
   <script src="js/main.js" defer></script>
@@ -46,48 +46,53 @@
       </div>
     </div>
   </nav>
-  <section id="profile">
+  <section class="animate-section" id="profile">
     <div class="section__pic-container">
       <img src="img/pexels-photo-574071.webp" alt="JOE profile picture" />
     </div>
     <div class="section__text">
-      <p class="section__text__p1">Hallo, Ik ben</p>
-      <h1 class="title">Joseph Appenteng</h1>
+      <p class="section__text__p1">Hoi, Ik ben</p>
+      <h1 class="name">Joseph Appenteng</h1>
       <p class="section__text__p2">Front end Developer</p>
 
       <div id="socials-container">
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon-button linkedin-button">
+        <a href="https://www.linkedin.com/in/joseph-appenteng-909990328/" target="_blank"
+          class="icon-button linkedin-button">
           <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://github.com/yourusername" target="_blank" class="icon-button github-button">
+        <a href="https://github.com/Joseph-Appenteng" target="_blank" class="icon-button github-button">
           <i class="fa-brands fa-github"></i> GitHub
         </a>
       </div>
     </div>
   </section>
-  <section id="about">
-    <h1 class="title">About Me</h1>
+
+  <i class="fa-solid fa-arrow-down" onclick="location.href='./#about'"></i>
+
+  <section id="about" class="animate-section">
+    <h1 class="title">Over Mij</h1>
     <div class="section-container">
       <div class="about-details-container">
         <div class="text-container">
           <p>
-            Hoi, ik ben Joseph Appenteng, een MBO student bij
-            Media College Amsterdam met een passie voor websites maken. Door
-            mijn cursussen en projecten heb ik sterke vaardigheden ontwikkeld
-            in front end en backend development , en ik ben
-            enthousiast om deze toe te passen in een professionele omgeving.
-            Ik gedij in samenwerkingsverbanden en hou ervan om nieuwe
-            uitdagingen aan te gaan. Dit portfolio toont mijn werk en
-            weerspiegelt mijn inzet voor groei en innovatie. Ik kijk ernaar
-            uit om bij te dragen en te leren tijdens mijn aankomende stage.
-            Bedankt voor je bezoek!
+            Hoi, ik ben Joseph Appenteng, een MBO student aan het Media College Amsterdam met een passie voor
+            webdevelopment. Door mijn cursussen en projecten heb ik vooral sterke vaardigheden ontwikkeld in front-end
+            development, terwijl ik ook basiskennis heb van back-end development. Ik ben enthousiast om mijn front-end
+            expertise toe te passen in een professionele omgeving. Ik werk graag samen in een team en geniet ervan om
+            nieuwe uitdagingen aan te gaan. Dit portfolio laat mijn werk zien en weerspiegelt mijn inzet voor groei en
+            innovatie. Ik kijk ernaar uit om tijdens mijn aankomende stage bij te dragen en te leren. Bedankt voor je
+            bezoek!
           </p>
         </div>
         <div class="about-containers">
           <div class="details-container">
             <i class="fa-solid fa-school"></i>
-            <h3>Ervaring</h3>
-            <p>2+ Jaar <br />Web Development</p>
+            <h3>CV</h3>
+            <a href="img/Joseph Appenteng _ LinkedIn (1).pdf" download="Joseph_Appenteng_CV.pdf"
+              class="icon-button linkedin-button">
+              <i class="fa-solid fa-file"></i> Download CV
+            </a>
+
           </div>
           <div class="details-container">
             <i class="fa-solid fa-graduation-cap"></i>
@@ -97,10 +102,12 @@
         </div>
       </div>
     </div>
+
     <i class="fa-solid fa-arrow-down" onclick="location.href='./#experience'">
     </i>
+
   </section>
-  <section id="experience">
+  <section id="experience" class="animate-section">
     <h1 class="title">Ervaring</h1>
     <div class="experience-details-container">
       <div class="about-containers">
@@ -125,7 +132,7 @@
               <i class="fa-brands fa-sass"></i>
               <div>
                 <h3>SASS</h3>
-                <p>Tussenliggend</p>
+                <p>Gemiddeld</p>
               </div>
             </article>
             <article>
@@ -135,46 +142,15 @@
                 <p>Basic</p>
               </div>
             </article>
-            <article>
-              <i class="fa-solid fa-plus"></i>
-              <div>
-                <h3>Adobe XD</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <i class="fa-brands fa-github"></i>
-              <div>
-                <h3>Github</h3>
-                <p>Tussenliggend</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Backend Skills</h2>
-          <div class="article-container">
-            <article>
-              <i class="fa-solid fa-database"></i>
-              <div>
-                <h3>MySql</h3>
-                <p>Tussenliggend</p>
-              </div>
-            </article>
-            <article>
-              <i class="fa-brands fa-docker"></i>
-              <div>
-                <h3>Docker</h3>
-                <p>Ervaren</p>
-              </div>
-            </article>
+
             <article>
               <i class="fa-brands fa-laravel"></i>
               <div>
                 <h3>Laravel</h3>
-                <p>Tussenliggend</p>
+                <p>Basis</p>
               </div>
             </article>
+
             <article>
               <i class="fa-brands fa-php"></i>
               <div>
@@ -182,6 +158,60 @@
                 <p>Basic</p>
               </div>
             </article>
+
+            <article>
+              <i class="fa-brands fa-wordpress"></i>
+              <div>
+                <h3>Wordpress</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-brands fa-react"></i>
+              <div>
+                <h3>React</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+
+
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Tools</h2>
+          <div class="article-container">
+            <article>
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <h3>Github</h3>
+                <p>Gemiddeld</p>
+              </div>
+            </article>
+            <article>
+              <i class="fa-solid fa-plus"></i>
+              <div>
+                <h3>Adobe XD</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="fa-solid fa-database"></i>
+              <div>
+                <h3>MySql</h3>
+                <p>Gemiddeld</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="fa-brands fa-docker"></i>
+              <div>
+                <h3>Docker</h3>
+                <p>Ervaren</p>
+              </div>
+            </article>
+
+
           </div>
         </div>
       </div>
@@ -190,13 +220,12 @@
     <i class="fa-solid fa-arrow-down" onclick="location.href='./#projects'">
     </i>
   </section>
-  <section id="projects">
-    <h1 class="title">Projects</h1>
+  <section id="projects" class="animate-section">
+    <h1 class="title">Projecten</h1>
     <div class="experience-details-container">
       <div class="about-containers">
         <div class="details-container color-container">
           <div class="article-container">
-
             <img data-modal-target="#modal" src="img/Screenshot 2024-09-09 103405.webp.png" alt="Project 1"
               class="project-img" />
           </div>
@@ -208,63 +237,155 @@
             <a href="https://github.com/seanras02/MUSE" target="_blank" class="icon-button github-button">
               <i class="fa-brands fa-github"></i> GitHub
             </a>
+            <button data-modal-target="#modal" class="btn1">Lees meer</button>
           </div>
         </div>
         <div class="details-container color-container">
           <div class="article-container">
             <img data-modal-target="#modal-2" src="img/Screenshot 2024-09-23 121848.webp.png" alt="Project 1"
               class="project-img" />
+            <span class="favorite-sticker">Favoriete project</span>
           </div>
-          <h2 class="experience-sub-title project-title">Websop Project</h2>
+          <h2 class="experience-sub-title project-title">Webshop</h2>
           <div class="btn-container">
-            <a href="https://josephappenteng.com/webshop/Homepagina.html" target="_blank" class="icon-button linkedin-button">
+            <a href="https://josephappenteng.com/webshop/Homepagina.html" target="_blank"
+              class="icon-button linkedin-button">
               <i class="fa-solid fa-window-maximize"></i> Live Demo
             </a>
             <a href="https://github.com/Joseph-Appenteng/Webshop" target="_blank" class="icon-button github-button">
               <i class="fa-brands fa-github"></i> GitHub
             </a>
+            <button data-modal-target="#modal-2" class="btn1">Lees meer</button>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+
+            <img data-modal-target="#modal-3" src="img/Screenshot 2024-10-02 142130.webp" alt="Project 1"
+              class="project-img" />
+
+          </div>
+          <h2 class="experience-sub-title project-title">Pokemon</h2>
+          <div class="btn-container">
+            <a href="https://35801.hosts2.ma-cloud.nl/portfolio/pokemon/" target="_blank"
+              class="icon-button linkedin-button">
+              <i class="fa-solid fa-window-maximize"></i> Live Demo
+            </a>
+            <a href="https://github.com/Joseph-Appenteng/Pokemon" target="_blank" class="icon-button github-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <button data-modal-target="#modal-3" class="btn1">Lees meer</button>
           </div>
         </div>
         <div class="details-container color-container">
           <div class="article-container">
-            <a href="project.html">
-              <img src="img/pexels-photo-574071.webp" alt="Project 1" class="project-img" />
-            </a>
+
+            <img data-modal-target="#modal-4" src="img/Screenshot 2024-10-02 154840.webp" alt="Project 1"
+              class="project-img" />
+
           </div>
-          <h2 class="experience-sub-title project-title">Project 3</h2>
+          <h2 class="experience-sub-title project-title">Blog Project</h2>
           <div class="btn-container">
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon-button linkedin-button">
+            <a href="https://35801.hosts2.ma-cloud.nl/portfolio/pikmin/" target="_blank"
+              class="icon-button linkedin-button">
               <i class="fa-solid fa-window-maximize"></i> Live Demo
             </a>
-            <a href="https://github.com/yourusername" target="_blank" class="icon-button github-button">
+            <a href="https://github.com/Joseph-Appenteng/Pikmin-blog" target="_blank" class="icon-button github-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <button data-modal-target="#modal-4" class="btn1">Lees meer</button>
+          </div>
+        </div>
+      </div>
+      <div class="hidden-projects">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img data-modal-target="#modal-5" src="img/Screenshot 2024-10-24 111858.png" alt="Project 5"
+              class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Muziek Speler</h2>
+          <div class="btn-container">
+            <a href="https://music.josephappenteng.com/" target="_blank" class="icon-button linkedin-button">
+              <i class="fa-solid fa-window-maximize"></i> Live Demo
+            </a>
+            <a href="https://github.com/Joseph-Appenteng/Muziek-Speler" target="_blank"
+              class="icon-button github-button">
               <i class="fa-brands fa-github"></i> GitHub
             </a>
           </div>
         </div>
+
         <div class="details-container color-container">
           <div class="article-container">
-            <a href="project.html">
-              <img src="img/pexels-photo-574071.webp" alt="Project 1" class="project-img" />
-            </a>
+            <img src="img/Screenshot 2024-10-24 120813.png" alt="Project 6" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">Project 4</h2>
+          <h2 class="experience-sub-title project-title">Tulpreizen</h2>
           <div class="btn-container">
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon-button linkedin-button">
+            <a href="https://35801.hosts2.ma-cloud.nl/portfolio/tulpreizen/" target="_blank"
+              class="icon-button linkedin-button">
               <i class="fa-solid fa-window-maximize"></i> Live Demo
             </a>
-            <a href="https://github.com/yourusername" target="_blank" class="icon-button github-button">
+            <a href="https://github.com/Joseph-Appenteng/Tulpreizen" target="_blank" class="icon-button github-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="img/elementor-placeholder-image.webp" alt="Project 7" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">..binnenkomend</h2>
+          <div class="btn-container">
+            <a href="#" target="_blank" class="icon-button linkedin-button">
+              <i class="fa-solid fa-window-maximize"></i> Live Demo
+            </a>
+            <a href="#" target="_blank" class="icon-button github-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="img/elementor-placeholder-image.webp" alt="Project 8" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">..binnenkomend</h2>
+          <div class="btn-container">
+            <a href="#" target="_blank" class="icon-button linkedin-button">
+              <i class="fa-solid fa-window-maximize"></i> Live Demo
+            </a>
+            <a href="#" target="_blank" class="icon-button github-button">
               <i class="fa-brands fa-github"></i> GitHub
             </a>
           </div>
         </div>
       </div>
-      <i class="fa-solid fa-arrow-down" onclick="location.href='./#contact'">
-      </i>
+
+      <!-- Toggle Button -->
+      <div class="btn-container">
+        <button id="toggle-projects-btn" class="btn1">Bekijk meer projecten</button>
+      </div>
+
+    </div>
+    </div>
+    <i class="fa-solid fa-arrow-down" onclick="location.href='./#contact'">
+    </i>
+  </section>
+
+  <section>
+    <div id="commit-widget">
+      <h2>Meest Recente Github Commits</h2>
+      <ul id="commit-list">
+          <li>Commits worden geladen...</li>
+      </ul>
+  </div>
   </section>
 
   <div class="modal" id="modal">
     <div class="modal-header">
-      <div class="title">Muse(Leerjaar2)</div>
+      <h2>Muse(Leerjaar2)</h2>
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
@@ -278,11 +399,10 @@
       </p>
       <h2>Project Overzicht</h2>
       <p>
-        Dit project is gemaakt door Game Artist (3 studenten), Software Development (5 studenten) en Ruimtelijk Vormgeving (3 studenten).
-        De opdrachtgever van dit project was Amsterdam Museum en de project duurde 9 weken. Mijn rol als software
-        development student was de software voor de installatie ontwikkelen. Dit betrof de logica
-        van de interacties, het koppelen van data aan de fysieke installatie en zorgen voor een gebruiksvriendelijke
-        ervaring voor museumbezoekers.</p>
+        Dit project is gemaakt door Game Artist (3 studenten), Software Development (5 studenten) en Ruimtelijk
+        Vormgeving (3 studenten). De opdrachtgever van dit project was Amsterdam Museum en de project duurde 9 weken.
+        Mijn rol als software
+        development student was de software voor de installatie ontwikkelen.</p>
       <div class="project-info">
         <h2>Skills gebruikt</h2>
         <ul class="technologies-list">
@@ -307,7 +427,7 @@
 
   <div class="modal" id="modal-2">
     <div class="modal-header">
-      <div class="title">Webshop(Leerjaar 2)</div>
+      <h2>Webshop(Leerjaar 2)</h2>
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
@@ -320,7 +440,7 @@
       </p>
       <h2>Project Overzicht</h2>
       <p>De doel van dit project was om een webshop replica te bouwen met productfilter en
-        winkelwagenfunctionaliteit.Mijn webshop keuze was Mediamarkt.de project duurde 4 weken.
+        winkelwagenfunctionaliteit.Mijn webshop keuze was Mediamarkt. De project duurde 4 weken.
       </p>
       <div class="project-info">
         <h2>Skills gebruikt</h2>
@@ -330,7 +450,8 @@
           <li><i class="fa-brands fa-js"></i> JavaScript</li>
         </ul>
         <div class="btn-container">
-          <a href="https://josephappenteng.com/webshop/Homepagina.html" target="_blank" class="icon-button linkedin-button">
+          <a href="https://josephappenteng.com/webshop/Homepagina.html" target="_blank"
+            class="icon-button linkedin-button">
             <i class="fa-solid fa-window-maximize"></i> Live Demo
           </a>
           <a href="https://github.com/Joseph-Appenteng/Webshop" target="_blank" class="icon-button github-button">
@@ -343,8 +464,118 @@
   </div>
   <div id="overlay"></div>
 
-  <section id="contact">
+  <div class="modal" id="modal-3">
+    <div class="modal-header">
+      <h2>Pokemon(Leerjaar 1)</h2>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        Dit project toont mijn vaardigheden in front-end ontwikkeling, API-integratie, en datavisualisatie. De app toont
+        data over mijn favoriet tv-shows, Pokémon en persoonlijke statistieken. Gebruikers kunnen onder andere een naam
+        invoeren om de
+        geschatte leeftijd op te vragen via de Agify API of een Pokémon proberen te vangen door een willekeurig
+        gegenereerde Pokémon te bekijken.
+      </p>
+      <h2>Project Overzicht</h2>
+      <p>De doel van dit project was om een dynamisch dashboard te bouwen met API-koppelingen en interactieve
+        grafieken.Dit project duurde 2 weken. Het ophalen en verwerken van externe API-data en het dynamisch updaten van
+        grafieken was een beetje uitdagend.
+      </p>
+      <div class="project-info">
+        <h2>Skills gebruikt</h2>
+        <ul class="technologies-list">
+          <li><i class="fa-brands fa-html5"></i> HTML</li>
+          <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+          <li><i class="fa-brands fa-js"></i> JavaScript</li>
+          <li><i class="fa-solid fa-chart-simple"></i> Chart.js</li>
+        </ul>
+        <div class="btn-container">
+          <a href="https://35801.hosts2.ma-cloud.nl/portfolio/pokemon/" target="_blank"
+            class="icon-button linkedin-button">
+            <i class="fa-solid fa-window-maximize"></i> Live Demo
+          </a>
+          <a href="https://github.com/Joseph-Appenteng/Pokemon" target="_blank" class="icon-button github-button">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="overlay"></div>
+
+  <div class="modal" id="modal-4">
+    <div class="modal-header">
+      <h2>Blog Project (Leerjaar 1)</h2>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        Dit individueel project toon een blogwebsite waar ik artikelen deel over games zoals Pikmin Bloom en Marvel's
+        Avengers. De website is responsive en heeft een strakke, moderne uitstraling.
+      </p>
+      <h2>Project Overzicht</h2>
+      <p>Het doel van dit project is om mijn vaardigheden in webontwikkeling te demonstreren door een functionele en
+        esthetisch aantrekkelijke blogwebsite te bouwen. Dit project duurde 2 weken.
+      </p>
+      <div class="project-info">
+        <h2>Skills gebruikt</h2>
+        <ul class="technologies-list">
+          <li><i class="fa-brands fa-html5"></i> HTML</li>
+          <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+        </ul>
+        <div class="btn-container">
+          <a href="https://35801.hosts2.ma-cloud.nl/portfolio/pikmin/" target="_blank"
+            class="icon-button linkedin-button">
+            <i class="fa-solid fa-window-maximize"></i> Live Demo
+          </a>
+          <a href="https://github.com/Joseph-Appenteng/Pikmin-blog" target="_blank" class="icon-button github-button">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="overlay"></div>
+
+  <section id="contact" class="animate-section">
     <h1 class="title">Neem Contact</h1>
+    <div class="wrapper">
+      <form action="#">
+        <div class="dbl-field">
+          <div class="field">
+            <input type="text" name="name" placeholder="Vul uw naam in">
+            <i class='fas fa-user'></i>
+          </div>
+          <div class="field">
+            <input type="text" name="email" placeholder="Voer uw e-mailadres in">
+            <i class='fas fa-envelope'></i>
+          </div>
+        </div>
+        <div class="dbl-field">
+          <div class="field">
+            <input type="tel" name="phone" placeholder="Voer uw telefoonnummer in" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            <i class='fas fa-phone-alt'></i>
+        </div>
+
+          <div class="field">
+            <input type="text" name="website" placeholder="Voer uw website in">
+            <i class='fas fa-globe'></i>
+          </div>
+        </div>
+        <div class="message">
+          <textarea placeholder="Schrijf je bericht" name="message"></textarea>
+          <i class="material-icons"></i>
+        </div>
+        <div class="button-area">
+          <button type="submit">Bericht verzenden</button>
+          <span></span>
+        </div>
+      </form>
+    </div>
+    <script src="js/script.js"></script>
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
         <i class="fa-solid fa-envelope"></i>
@@ -352,7 +583,7 @@
       </div>
       <div class="contact-info-container">
         <i class="fa-brands fa-linkedin"></i>
-        <p><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+        <p><a href="https://www.linkedin.com/in/joseph-appenteng-909990328/" target="_blank">LinkedIn</a></p>
       </div>
       <div class="contact-info-container">
         <i class="fa-solid fa-phone"></i>

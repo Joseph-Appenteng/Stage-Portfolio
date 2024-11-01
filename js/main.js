@@ -41,3 +41,38 @@ function closeModal(modal) {
   modal.classList.remove("active");
   overlay.classList.remove("active");
 }
+
+
+document.getElementById("toggle-projects-btn").addEventListener("click", function () {
+  const hiddenProjects = document.querySelector(".hidden-projects");
+  const btn = document.getElementById("toggle-projects-btn");
+
+  if (hiddenProjects.style.display === "none" || hiddenProjects.style.display === "") {
+    hiddenProjects.style.display = "flex";
+    btn.textContent = "Less Projects";
+  } else {
+    hiddenProjects.style.display = "none";
+    btn.textContent = "Bekijk meer Projecten";
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.animate-section');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+          } else {
+              entry.target.classList.remove('visible');
+          }
+      });
+  }, {
+      threshold: 0.1 // Trigger when 10% of the element is visible
+  });
+
+  sections.forEach(section => {
+      observer.observe(section);
+  });
+});

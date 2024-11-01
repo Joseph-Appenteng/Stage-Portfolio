@@ -5,19 +5,33 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden !important;
+  background-color: rgba(34, 37, 41, 255);
 }
+
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 
-p {
-  color: rgb(85, 85, 85);
+
+p, h1, h2, .experience-sub-title, .title, .section__text__p1, .section__text__p2 .text-container p {
+  color: #EAEAEA;
 }
+
+.details-container p{
+  color: black;
+}
+
+
+
+
 
 /* TRANSITION */
 
@@ -30,56 +44,92 @@ a,
 
 nav,
 .nav-links {
-    display: flex;
+  display: flex;
 }
 
 nav {
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
-    background-color: black;
-    color: white;
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh; /* You may want to adjust this to a fixed height for better control */
+  background-color: black;
+  color: white;
+  top: 0; /* Position it at the top of the viewport */
+  min-width: 100%;
 }
 
 .nav-links {
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    text-decoration-color: white;
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
 }
 
 a:hover {
-    color: lightblue;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgb(181, 181, 181);
+  color: lightblue;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
+/* Apply the pulse animation to the logo */
 .logo {
-    font-size: 2rem;
-    color: #0077B5;
+  animation: pulse 3s infinite ease-in-out;
+  transition: color 0.3s ease;
 }
 
 .logo:hover {
-    cursor: pointer;
+  transform: scale(1.2); /* Slightly scale up on hover */
+  color: white; /* Change color on hover */
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #0077b5;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
 
 nav p {
-    margin: 0;
-    color: white;
-    font-size: 1rem;
-    text-align: center;
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.animate-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* HAMBURGER MENU */
@@ -91,6 +141,7 @@ nav p {
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  z-index: 10000;
 }
 
 .hamburger-icon {
@@ -165,8 +216,7 @@ nav p {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
+  height: 80vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -182,13 +232,13 @@ section {
   display: flex;
   justify-content: center;
   gap: 20rem;
-  height: 80vh;
+  height: 100vh;
 }
 
 .section__pic-container {
   display: flex;
-  height: 200px;
-  width: 100px;  
+  height: 20rem;
+  width: 10rem;
   margin: auto 0;
 }
 
@@ -213,6 +263,12 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  margin-top: 10rem;
+}
+
+.name {
+  font-size: 3rem;
+  color: #0077b5;
 }
 
 #socials-container {
@@ -231,27 +287,85 @@ section {
 
 /* BUTTONS */
 
+.technologies-list {
+  list-style: none;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .icon-button {
-  display: inline-block;
-  padding: 10px 15px;
-  margin-right: 10px;
-  border-radius: 5px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: white;
   font-size: 18px;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  min-width: 7rem;
+}
+
+.btn1 {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  width: 7rem;
+  height: 2.8rem;
+  font-size: 18px;
+  border-radius: 1rem;
+  border: none;
 }
 
 .linkedin-button {
-  background-color: #0077B5;
+  background-color: #0077b5;
 }
 
 .github-button {
   background-color: #333;
 }
 
-.icon-button i {
-  margin-right: 5px;
+.fa-arrow-down {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 3rem;
+  margin: 0 auto;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  color:#0077b5;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.hidden-projects {
+  display: none;
+  gap: 2rem;
+}
+
+#toggle-projects-btn {
+  margin-top: 2rem;
+  width: 15rem;
+  cursor: pointer;
+  margin-bottom: 5rem;
 }
 
 /* ABOUT SECTION */
@@ -259,11 +373,28 @@ section {
 #about {
   position: relative;
 }
+/* Sticker for favorite project */
+.favorite-sticker {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  background-color: #ff4757;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.article-container {
+  position: relative;
+}
 
 .about-containers {
   gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
 }
 
 .about-details-container {
@@ -278,12 +409,6 @@ section {
 
 .about-pic {
   border-radius: 2rem;
-}
-
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
 }
 
 .details-container {
@@ -363,13 +488,15 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 2rem;
   color: black;
+  font-size: 1.5rem;
 }
 
 .project-btn {
@@ -379,10 +506,125 @@ article .icon {
 
 /* CONTACT */
 
+::selection {
+  color: #fff;
+  background: #0077b5;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 715px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+.wrapper header {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid #ccc;
+}
+.wrapper form {
+  margin: 35px 30px;
+}
+.wrapper form.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+form .dbl-field {
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+.dbl-field .field {
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+}
+.wrapper form i {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: #ccc;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+form .field input,
+form .message textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.field input::placeholder,
+.message textarea::placeholder {
+  color: #ccc;
+}
+.field input:focus,
+.message textarea:focus {
+  padding-left: 47px;
+  border: 2px solid #0077b5;
+}
+.field input:focus ~ i,
+.message textarea:focus ~ i {
+  color: #0077b5;
+}
+form .message {
+  position: relative;
+}
+form .message i {
+  top: 30px;
+  font-size: 20px;
+}
+form .message textarea {
+  min-height: 130px;
+  max-height: 230px;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 15px 20px 0 48px;
+}
+form .message textarea::-webkit-scrollbar {
+  width: 0px;
+}
+.message textarea:focus {
+  padding-top: 14px;
+}
+form .button-area {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+.button-area button {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 13px 25px;
+  background: #0077b5;
+  transition: background 0.3s ease;
+}
+.button-area button:hover {
+  background: #0077b5;
+}
+.button-area span {
+  font-size: 17px;
+  margin-left: 30px;
+  display: none;
+}
+
 #contact {
   display: flex;
   margin-top: 1rem;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   height: 70vh;
 }
@@ -410,7 +652,7 @@ article .icon {
   font-size: larger;
 }
 
-.contact-info-container a{
+.contact-info-container a {
   color: black;
 }
 
@@ -422,9 +664,7 @@ article .icon {
   height: 2.5rem;
 }
 
-
 /* FOOTER SECTION */
-
 
 footer p {
   text-align: center;
@@ -432,8 +672,8 @@ footer p {
   color: white;
 }
 
-
 /*popup*/
+
 .modal {
   position: fixed;
   top: 50%;
@@ -444,9 +684,12 @@ footer p {
   border-radius: 10px;
   z-index: 10;
   background-color: white;
-  max-height: 100%;
-  width: 1000px;
-  max-width: 100%;
+  min-height: 80vh;
+  min-width: 80vw;
+}
+
+.modal p, .modal h2{
+  color: black;
 }
 
 .modal.active {
@@ -487,7 +730,7 @@ footer p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
 
@@ -496,26 +739,24 @@ footer p {
   pointer-events: all;
 }
 
-
 .project-image img {
   border-radius: 1rem;
   width: 100%;
   max-width: 500px;
-  
 }
 
-.project-img{
+.project-img {
   cursor: pointer;
   transition: 0.3s;
   transition-property: transform;
 }
 
-.project-img:hover{
-  transform: scale(1.2)
+.project-img:hover {
+  transform: scale(1.2);
 }
 
 .linkedin-button {
-  background-color: #0077B5;
+  background-color: #0077b5;
 }
 
 .github-button {
@@ -526,106 +767,193 @@ footer p {
   margin-right: 5px;
 }
 
+.contact-info-upper-container, .contact-info-upper-container a{
+  color: white;
+}
+
+
+/* github widget*/
+#commit-widget {
+  width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: white;
+  margin-top: 5rem;
+}
+
+#commit-widget h2 {
+  text-align: center;
+}
+
+#commit-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#commit-list li {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#commit-list li strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-    #contact,
-    #projects {
-      height: fit-content;
-    }
+  #profile {
+    height: 83vh;
   }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
+  .about-containers {
+    flex-wrap: wrap;
   }
-  
-  @media screen and (max-width: 600px) {
-    #contact,
-    footer {
-      height: 40vh;
-    }
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
-    }
-    .contact-info-container {
-      margin: 0;
-    }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 2rem;
-    }
-    .text-container {
-      text-align: justify;
-    }
+  #contact,
+  #projects {
+    height: fit-content;
   }
+
+  .hidden-projects {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    height: 275px;
+    margin: 3rem;
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+
+  .hidden-projects {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper header {
+    text-align: center;
+  }
+  .wrapper form {
+    margin: 35px 20px;
+  }
+  form .dbl-field {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  form .dbl-field .field {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+  }
+  form .message textarea {
+    resize: none;
+  }
+  form .button-area {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .button-area button {
+    width: 100%;
+    padding: 11px 0;
+    font-size: 16px;
+  }
+  .button-area span {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal {
+    font-size: 0.8rem;
+    min-height: 100vh;
+    margin-top: 1rem;
+  }
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .hidden-projects,
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
