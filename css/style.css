@@ -53,6 +53,7 @@ nav {
   height: 17vh; /* You may want to adjust this to a fixed height for better control */
   background-color: black;
   color: white;
+  position: sticky;
   top: 0; /* Position it at the top of the viewport */
   min-width: 100%;
 }
